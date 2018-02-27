@@ -22,7 +22,7 @@ const keyboard = {
 
 while (true) {
   var language = prompt('Выберите язык: en-0, ru-1, ua-2');
-  if ((language >= 0 && language <= 2) || language == null && (language ^ 0)==language) break;
+  if ((language >= 0 && language <= 2 && Number.isInteger(language)) || language == null) break;
 
   alert('Выбран не доступный язык');
 }
