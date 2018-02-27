@@ -22,18 +22,18 @@ const keyboard = {
 
 while (true) {
   var language = prompt('Выберите язык: en-0, ru-1, ua-2');
-  if ((language >= 0 && language <= 2 && Number.isInteger(language)) || language == null) break;
+  if ((language >= 0 && language <= 2 && Number.isInteger(language)) || language === null) break;
 
   alert('Выбран не доступный язык');
 }
 language = Number(language);
-if (language == 0) {
+if (language === 0) {
   keyboard.currentLang = 'en';
   var alphabet = keyboard.layouts.en;
-} else if (language == 1) {
+} else if (language === 1) {
   keyboard.currentLang = 'ru';
   var alphabet = keyboard.layouts.ru;
-} else if (language == 2) {
+} else if (language === 2) {
   keyboard.currentLang = 'ua';
   var alphabet = keyboard.layouts.ua;
 }
